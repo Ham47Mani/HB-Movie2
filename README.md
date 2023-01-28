@@ -33,7 +33,7 @@
 <br />
 <br />
 
-<img src="design/preview.png" alt="Preview" width="100%">
+<img src="preview.png" alt="Preview" width="100%">
 
 
 <br />
