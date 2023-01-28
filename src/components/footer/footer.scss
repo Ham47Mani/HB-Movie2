@@ -1,0 +1,56 @@
+//--- Import Sass Style
+@use "../../sass/" as *;
+
+// ============================ Start Footer ============================
+footer {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 5rem 0 0;
+
+  //------ Footer Content
+  .footer__content {
+    max-width: 1000px;
+    padding: 0 1rem;
+
+    //--- Logo
+    &__logo { 
+      @include flex(center, center);
+      img { width: 70px }
+      a { font-size: 2rem; font-weight: 800; letter-spacing: 4px }
+    }
+    //--- Menus
+    &__menus {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      //--- Tablet Screen
+      @include tablet { 
+        grid-template-columns: repeat(3, 1fr);
+        &__menu { align-items: center !important; }
+      }
+      //--- Mobile Screen
+      @include mobile { grid-template-columns: repeat(1, 1fr) }
+
+      &__menu {
+        @include flex(flex-start, flex-start);
+        flex-direction: column;
+        margin-top: 2rem;
+        font-weight: 600;
+        font-size: 1.2rem;
+
+        & > * ~ * { margin-top: 1rem }
+      }
+    }
+  }
+
+  //------ Copyright
+  .copyright {
+    text-align: center;
+    padding: 2rem 0 1rem;
+    background-image: linear-gradient(to top, $black, rgba($black, 0.2));
+    color: #BBB;
+    strong { color: #FFF }
+  }
+}
+// ============================ End Footer ============================

@@ -1,0 +1,30 @@
+//--- Import Sass Variables
+@use "../../sass/variables" as *;
+
+// =============================== Start Page Header ===============================
+.page-header {
+  padding: $header-height 0 2rem;
+  text-align: center;
+  position: relative;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  h2 {
+    position: relative;
+    z-index: 99;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 4px
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to top, $body-bg, rgba($black, 0));
+  }
+}
+// =============================== End Page Header ===============================

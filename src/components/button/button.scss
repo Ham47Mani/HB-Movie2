@@ -1,0 +1,45 @@
+// ============================== Start Button ==============================
+//--- Import Styles
+@use '../../sass/' as *;
+
+button {
+  cursor: pointer;
+  font-family: $font-family;
+}
+.btn {
+  border: 4px solid transparent;
+  background-color: $main-color;
+  color: $text-color;
+  border-radius: $border-radius;
+  padding: 0.3rem 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 0 7px 2px #F00;
+  transition: .3s ease;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0 0 15px 5px #F00;
+  }
+}
+
+.btn-outline {
+  border: 3px solid $text-color;
+  background-color: transparent;
+  color: $text-color;
+  box-shadow: unset;
+  transition: .3s ease;
+
+  &:hover {
+    box-shadow: unset;
+    color: $main-color;
+    background-color: $text-color;
+  }
+}
+
+.btn-small {
+  border-width: 2px;
+  padding: 0.25rem 1.5rem;
+  font-size: 1rem;
+}
+// ============================== End Button ==============================

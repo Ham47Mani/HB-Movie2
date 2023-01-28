@@ -1,0 +1,46 @@
+//--- Import Sass Files
+@use "../../sass/" as *;
+
+// =========================== Start Movie Grid ===========================
+.section { padding: 0 }
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+
+  //--- Tablet Screen
+  @include tablet { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+
+  //--- Loadmore
+  &__loadmore {
+    text-align: center;
+  }
+}
+// =========================== End Movie Grid ===========================
+
+// =========================== Start Movie Search ===========================
+.movie-search {
+  position: relative;
+  width: 100%;
+
+  input {
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 8rem;
+    font-size: 1.2rem;
+  }
+  button {
+    position: absolute; 
+    right: 0; 
+    top: 2px;
+    padding: 0.3rem 5rem;
+
+    //--- Mobile Screen
+    @include mobile {
+      right: 1px;
+      top: 1px ;
+    }
+  }
+}
+// =========================== End Movie Search ===========================

@@ -1,0 +1,15 @@
+//------ Import Sass
+@use "../../sass/" as *;
+
+// ========================================= Start Movie List =========================================
+.movie-list {
+  .swiper-slide {
+    width: 15%;
+
+    //--- Tablet Screen
+    @include tablet { width: 30% }
+    //--- Mobile Screen
+    @include mobile { width: 40% }
+  }
+}
+// ========================================= End Movie List =========================================

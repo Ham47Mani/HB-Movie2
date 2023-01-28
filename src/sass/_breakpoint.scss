@@ -1,0 +1,16 @@
+//--- Import Variables
+@use './_variables.scss' as *;
+
+//------ Mobile Screen
+@mixin mobile {
+  @media only screen and (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+//------ Tablet Screen
+@mixin tablet {
+  @media only screen and (max-width: $tablet-width) {
+    @content;
+  }
+}

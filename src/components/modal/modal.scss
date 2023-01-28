@@ -1,0 +1,54 @@
+// ============================== Start Modal ==============================
+//--- Import Sass Files
+@use "../../sass/" as *;
+
+.modal {
+  @include flex(center, center);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba($color: $black, $alpha: 0.4);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+
+  &.active { opacity: 1; visibility: visible }
+
+  //--- Modal Content
+  &__content {
+    padding: 2rem;
+    background-color: $body-bg;
+    width: 50%;
+    opacity: 0;
+    transform: translateY(-300px);
+    transition: .6s ease;
+    position: relative;
+
+    //--- Tablet Screen 
+    @include tablet { width: 80% }
+    
+    //--- Close Icon
+    &__close {
+      position: absolute;
+      right: 5px ;
+      top: 5px;
+      font-size: 1.5rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $main-color;
+      }
+    }
+
+  }
+
+  //--- Modal Active
+  &.active {
+    //--- Modal Content
+    .modal__content { opacity: 1; transform: translateY(0) }
+  }
+}
+// ============================== End Modal ==============================

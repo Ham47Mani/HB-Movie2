@@ -1,0 +1,90 @@
+//--- Import Sass Files
+@use "../../sass/" as *;
+
+// ========================================== Start Hero Slide ==========================================
+.hero-slide {
+  margin-bottom: 3rem;
+
+  //--- Hero Slide Item
+  &__item {
+    padding: 9rem 0;
+    width: 100%;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      @include overlay();
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(to top, $body-bg, rgba($black, 0));
+    }
+
+    //--- Hero Slide Item Content
+    &__content {
+      position: relative;
+      @include flex(center, center);
+
+      //--- Info Content
+      &__info {
+        width: 65%;
+        padding: 0 3rem;
+
+        //--- Tablet Screen
+        @include tablet { width: 100% }
+
+        & > * ~ * {
+          margin-top: 3rem;
+        } 
+        //--- Title
+        .title {
+          font-size: 4rem; font-weight: 700; line-height: 1;
+          //--- Tablet Screen
+          @include tablet { font-size: 2rem }
+        }
+        //--- Overview
+        .overview { font-weight: 700; color: #DDD }
+        //--- Buttons
+        .btns .btn:first-of-type { margin-right: 1.5rem }
+
+        .btns, .title, .overview {
+          opacity: 0;
+          transform: translateY(-200px);
+          transition: .5s ease;
+        }
+      }
+      //--- Poster
+      &__poster {
+        flex: 1;
+        @include flex(flex-start, center);
+        //--- Poster Image
+        img {
+          border-radius: $border-radius;
+          box-shadow: $box-shadow;
+          transform: scale(0);
+          transition: .5s ease;
+        }
+        //--- Tablet Screen
+        @include tablet { display: none }
+      }
+    }
+    &.active &__content {
+      &__poster img { transform: scale(1) }
+      .btns, .title, .overview { opacity: 1; transform: translateY(0) }
+      .title { transition-delay: .3s }
+      .overview { transition-delay: .6s }
+      .btns { transition-delay: .9s }
+    }
+  }
+}
+// ========================================== End Hero Slide ==========================================

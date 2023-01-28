@@ -1,0 +1,14 @@
+//--- Import Sass Files
+@use '../../sass/variables' as *;
+
+// ----------------- Start Input File -----------------
+input {
+  border: 0;
+  background-color: $black;
+  padding: .3rem 1.3rem;
+  font-size: 1rem;
+  border-radius: $border-radius;
+  color: $text-color;
+  font-family: $font-family;
+}
+// ----------------- End Input File -----------------
