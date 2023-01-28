@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/HB-Movie2/static/css/main.e66cc764.css",
+    "main.js": "/HB-Movie2/static/js/main.745ccd84.js",
+    "static/media/boxicons.svg": "/HB-Movie2/static/media/boxicons.045b05bf2dc119267a90.svg",
+    "static/media/footer-bg.jpg": "/HB-Movie2/static/media/footer-bg.67e95f05e76a8cebf7e2.jpg",
+    "static/media/boxicons.eot": "/HB-Movie2/static/media/boxicons.092b78589f3f53e60030.eot",
+    "static/media/boxicons.woff": "/HB-Movie2/static/media/boxicons.0f4528cf3c75a4b361c0.woff",
+    "static/media/boxicons.ttf": "/HB-Movie2/static/media/boxicons.cbd149c55e2396cb52e7.ttf",
+    "static/media/boxicons.woff2": "/HB-Movie2/static/media/boxicons.8d765747a5588f36ff61.woff2",
+    "static/media/logo.png": "/HB-Movie2/static/media/logo.9ec8bbb470e0ea113f8c.png",
+    "index.html": "/HB-Movie2/index.html",
+    "main.e66cc764.css.map": "/HB-Movie2/static/css/main.e66cc764.css.map",
+    "main.745ccd84.js.map": "/HB-Movie2/static/js/main.745ccd84.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e66cc764.css",
+    "static/js/main.745ccd84.js"
+  ]
+}
