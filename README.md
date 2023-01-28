@@ -22,7 +22,7 @@
   <p align="center">
     HB Movie is a simple movie website work with "The Movie Databases API", i make this simple website as a practice for react
     <br />
-    <a href="https://ham47mani.github.io/Elmaw3ida/">View Demo</a>
+    <a href="https://ham47mani.github.io/HB-Movie2/">View Demo</a>
     ·
     <a href="https://github.com/Ham47Mani/HB-Movie2/issues">Report Bug</a>
     ·
@@ -33,7 +33,7 @@
 <br />
 <br />
 
-<img src="preview.png" alt="Preview" width="100%">
+<img src="design/preview.png" alt="Preview" width="100%">
 
 
 <br />
